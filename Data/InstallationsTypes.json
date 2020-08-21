@@ -1,0 +1,253 @@
+﻿[
+  {
+    "Id": 1,
+    "Type": "Brak",
+    "Description": "",
+    "Quantity": 0,
+    "Unit": "kW",
+    "BasicUnitPrice": 0
+  },
+
+  {
+    "Id": 2,
+    "Type": "Grunt",
+    "Description": "Naziemny system montażu 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 610.50
+  },
+
+  {
+    "Id": 3,
+    "Type": "Grunt",
+    "Description": "Naziemny system montażu 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 916.00
+  },
+
+  {
+    "Id": 4,
+    "Type": "Grunt",
+    "Description": "Naziemny system montażu 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 610.50
+  },
+
+  {
+    "Id": 5,
+    "Type": "Grunt",
+    "Description": "Naziemny system montażu 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 916.00
+  },
+
+  {
+    "Id": 6,
+    "Type": "Dach",
+    "Description": "Skośny - Dachówka 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 468.00
+  },
+
+  {
+    "Id": 7,
+    "Type": "Dach",
+    "Description": "Skośny - Gont/Papa/Blachodachówka 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 378.50
+  },
+
+  {
+    "Id": 8,
+    "Type": "Dach",
+    "Description": "Skośny - Blacha trapezowa 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 210.00
+  },
+
+  {
+    "Id": 9,
+    "Type": "Dach",
+    "Description": "Skośny - dach dwuwarstwowy pokryty trapezem 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 340.50
+  },
+
+  {
+    "Id": 10,
+    "Type": "Dach",
+    "Description": "Skośny - Sys. Mont. na rąbek 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 477.00
+  },
+
+  {
+    "Id": 11,
+    "Type": "Dach",
+    "Description": "Skośny - Sys. Mont. Eurofala (PCV) 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 413.50
+  },
+
+  {
+    "Id": 12,
+    "Type": "Dach",
+    "Description": "Skośny - Sys. Mont. Dwuwarstwowy - kaletki 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 581.00
+  },
+
+  {
+    "Id": 13,
+    "Type": "Dach",
+    "Description": "Skośny - Eternit 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 413.50
+  },
+
+  {
+    "Id": 14,
+    "Type": "Dach",
+    "Description": "Płaski 25 st - papa/beton itp.",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 502.50
+  },
+
+  {
+    "Id": 15,
+    "Type": "Dach",
+    "Description": "Płaski 15 st - papa/beton itp.",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 458.50
+  },
+
+  {
+    "Id": 16,
+    "Type": "Dach",
+    "Description": "Płaski 25 st - na pokr. blach.",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 712.00
+  },
+
+  {
+    "Id": 17,
+    "Type": "Dach",
+    "Description": "Płaski 15 st - na pokr. blach.",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 668.50
+  },
+
+  {
+    "Id": 18,
+    "Type": "Dach",
+    "Description": "Płaski System Balastowy 15 st poziom 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 523.50
+  },
+
+  {
+    "Id": 19,
+    "Type": "Dach",
+    "Description": "Płaski System Balastowy Pion 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 855.50
+  },
+
+  {
+    "Id": 20,
+    "Type": "Dach",
+    "Description": "Płaski System Balastowy Wsch-Zach 1kW",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 671.50
+  },
+
+  {
+    "Id": 21,
+    "Type": "Dach",
+    "Description": "Specjalny system montażowy",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 1170.00
+  },
+
+  {
+    "Id": 22,
+    "Type": "Dach",
+    "Description": "Skośny - Dachówka 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 634.50
+  },
+
+  {
+    "Id": 23,
+    "Type": "Dach",
+    "Description": "Skośny - Gont/Papa/Blachodachówka 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 567.50
+  },
+
+  {
+    "Id": 24,
+    "Type": "Dach",
+    "Description": "Skośny - Blacha Trapezowa 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 510.50
+  },
+
+  {
+    "Id": 25,
+    "Type": "Dach",
+    "Description": "Skośny - System Mont. na rąbek 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 715.50
+  },
+
+  {
+    "Id": 26,
+    "Type": "Dach",
+    "Description": "Skośny - Sys. Mont. Euforia (PCV) 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 620.00
+  },
+
+  {
+    "Id": 27,
+    "Type": "Dach",
+    "Description": "Skośny - Sys. Mont. Dwuwarstwowy - kaletki 1kW - pozioma",
+    "Unit": "kW",
+    "BasicUnitPrice": 871.50
+  },
+
+  {
+    "Id": 28,
+    "Type": "Dach",
+    "Description": "Skośny - Eternit 1kW - pozioma",
+    "Quantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 620.50
+  }
+
+]

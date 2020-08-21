@@ -1,0 +1,309 @@
+[
+  {
+    "Id": 1,
+    "Manufacturer": "Rene PV",
+    "Model": "Reneled 320W-Half Cut - FB",
+    "Power": 320,
+    "Unit": "szt",
+    "BasicUnitPrice": 1155.00
+  },
+
+  {
+    "Id": 2,
+    "Manufacturer": "Rene PV",
+    "Model": "Reneled 320W Half Cut-Czarna Ramka",
+    "Power": 320,
+    "Unit": "szt",
+    "BasicUnitPrice": 1133.00
+  },
+
+  {
+    "Id": 3,
+    "Manufacturer": "Longi",
+    "Model": "Longi 320W",
+    "Power": 320,
+    "Unit": "szt",
+    "BasicUnitPrice": 1133.00
+  },
+
+  {
+    "Id": 4,
+    "Manufacturer": "Longi",
+    "Model": "Longi 315W Full Black",
+    "Power": 315,
+    "Unit": "szt",
+    "BasicUnitPrice": 1221.50
+  },
+
+  {
+    "Id": 5,
+    "Manufacturer": "Longi",
+    "Model": "Longi 350W Full Black ",
+    "Power": 350,
+    "Quantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 1263.00
+  },
+
+  {
+    "Id": 6,
+    "Manufacturer": "Longi",
+    "Model": "Longi 360W",
+    "Power": 360,
+    "Unit": "szt",
+    "BasicUnitPrice": 1274.00
+  },
+
+  {
+    "Id": 7,
+    "Manufacturer": "Longi",
+    "Model": "Longi 365W",
+    "Power": 365,
+    "Unit": "szt",
+    "BasicUnitPrice": 1377.00
+  },
+
+  {
+    "Id": 8,
+    "Manufacturer": "Q.Cells",
+    "Model": "Q.Cells Q.PEAK DUO G6 345",
+    "Power": 345,
+    "Unit": "szt",
+    "BasicUnitPrice": 1233.00
+  },
+
+  {
+    "Id": 9,
+    "Manufacturer": "Jinko",
+    "Model": "Jinko JKM330M-60H-V",
+    "Power": 330,
+    "Unit": "szt",
+    "BasicUnitPrice": 1210.50
+  },
+
+  {
+    "Id": 10,
+    "Manufacturer": "Ja Solar",
+    "Model": "JA SOLAR JAM60S10 Half Cut PERC MONO 325",
+    "Power": 325,
+    "Unit": "szt",
+    "BasicUnitPrice": 1128.50
+  },
+
+  {
+    "Id": 11,
+    "Manufacturer": "Ja Solar",
+    "Model": "JA SOLAR JAM60S10 Half Cut PERC MONO 330",
+    "Power": 330,
+    "Unit": "szt",
+    "BasicUnitPrice": 1135.00
+  },
+
+  {
+    "Id": 12,
+    "Manufacturer": "Ja Solar",
+    "Model": "JA SOLAR JAM60S10 Half Cut PERC MONO 335",
+    "Power": 335,
+    "Unit": "szt",
+    "BasicUnitPrice": 1142.00
+  },
+
+  {
+    "Id": 13,
+    "Manufacturer": "Ja Solar",
+    "Model": "JA SOLAR JAM60S10 Half Cut PERC MONO 340",
+    "Power": 340,
+    "Unit": "szt",
+    "BasicUnitPrice": 1148.50
+  },
+
+  {
+    "Id": 14,
+    "Manufacturer": "Ja Solar",
+    "Model": "JA SOLAR JAM72S10 Half Cut PERC MBB MONO 405",
+    "Power": 405,
+    "Unit": "szt",
+    "BasicUnitPrice": 1254.00
+  },
+
+  {
+    "Id": 15,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BB ECO – BEM 310W",
+    "Power": 310,
+    "Unit": "szt",
+    "BasicUnitPrice": 1144.00
+  },
+
+  {
+    "Id": 16,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BB ECO – BEM 315W",
+    "Power": 315,
+    "Unit": "szt",
+    "BasicUnitPrice": 1143.00
+  },
+
+  {
+    "Id": 17,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BEM 320W WHITE",
+    "Power": 320,
+    "Unit": "szt",
+    "BasicUnitPrice": 1244.00
+  },
+
+  {
+    "Id": 18,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BEM 320W FULL BLACK",
+    "Power": 320,
+    "Unit": "szt",
+    "BasicUnitPrice": 1260.50
+  },
+
+  {
+    "Id": 19,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BEM 325W WHITE",
+    "Power": 325,
+    "Unit": "szt",
+    "BasicUnitPrice": 1263.00
+  },
+
+  {
+    "Id": 20,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BEM 325W FULL BLACK",
+    "Power": 325,
+    "Unit": "szt",
+    "BasicUnitPrice": 1279.50
+  },
+
+  {
+    "Id": 21,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BEM Extreme 380W Full Black",
+    "Power": 380,
+    "Unit": "szt",
+    "BasicUnitPrice": 1375.00
+  },
+
+  {
+    "Id": 22,
+    "Manufacturer": "BRUK-BET",
+    "Model": "BEM Extreme 380W White",
+    "Power": 380,
+    "Unit": "szt",
+    "BasicUnitPrice": 1358.00
+  },
+
+  {
+    "Id": 23,
+    "Manufacturer": "LG",
+    "Model": "LG 405N2T-J5-BIFACIAL",
+    "Power":405,
+    "Unit": "szt",
+    "BasicUnitPrice": 2828.00
+  },
+
+  {
+    "Id": 24,
+    "Manufacturer": "LG",
+    "Model": "LG NeON R Q1C-V5 370W",
+    "Power": 370,
+    "Unit": "szt",
+    "BasicUnitPrice": 3167.50
+  },
+
+  {
+    "Id": 25,
+    "Manufacturer": "SHARP",
+    "Model": "SHARP NU-BA Mono 385 W",
+    "Power": 385,
+    "Unit": "szt",
+    "BasicUnitPrice": 1367.00
+  },
+
+  {
+    "Id": 26,
+    "Manufacturer": "SHARP",
+    "Model": "SHARP NU-JB395",
+    "Power": 395,
+    "Unit": "szt",
+    "BasicUnitPrice": 1355.00
+  },
+
+  {
+    "Id": 27,
+    "Manufacturer": "LONGI",
+    "Model": "LONGI 425W - bifacial glass-glass Tier1",
+    "Power": 425,
+    "Unit": "szt",
+    "BasicUnitPrice": 1466.00
+  },
+
+  {
+    "Id": 28,
+    "Manufacturer": "Astroenergy",
+    "Model": "ASTRONERGY Astro-semi CHSM60M-HC Series 325",
+    "Power": 325,
+    "Unit": "szt",
+    "BasicUnitPrice": 1128.50
+  },
+
+  {
+    "Id": 29,
+    "Manufacturer": "Astroenergy",
+    "Model": "ASTRONERGY Astro-semi CHSM60M-HC Series 330",
+    "Power": 330,
+    "Unit": "szt",
+    "BasicUnitPrice": 1135.00
+  },
+
+  {
+    "Id": 30,
+    "Manufacturer": "Astroenergy",
+    "Model": "ASTRONERGY Astro-semi CHSM60M-HC Series 335",
+    "Power": 335,
+    "Unit": "szt",
+    "BasicUnitPrice": 1141.50
+  },
+
+  {
+    "Id": 31,
+    "Manufacturer": "Astroenergy",
+    "Model": "ASTRONERGY Astro-semi CHSM60M-HC Series 340",
+    "Power": 340,
+    "Unit": "szt",
+    "BasicUnitPrice": 1148.00
+  },
+
+  {
+    "Id": 32,
+    "Manufacturer": "AE Solar",
+    "Model": "AE SOLAR AE.MB-72 POWERPLUS MONO PERC FULL CELL",
+    "Power": 400,
+    "Unit": "szt",
+    "BasicUnitPrice": 1247.50
+  },
+
+  {
+    "Id": 33,
+    "Manufacturer": "Hanplast",
+    "Model": "HANPLAST PREMIUM BIFACIAL 300W",
+    "Power": 300,
+    "Unit": "szt",
+    "BasicUnitPrice": 1529.00
+  },
+
+  {
+    "Id": 34,
+    "Manufacturer": "Hanplast",
+    "Model": "HANPLAST PREMIUM PLUS HJT 305",
+    "Power": 305,
+    "Unit": "szt",
+    "BasicUnitPrice": 1397.00
+  }
+
+]

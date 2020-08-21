@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Brak automatyki pomiarowej",
+    "DefaultQuantity": 0,
+    "Unit": "szt",
+    "BasicUnitPrice": 0
+  },
+
+  {
+    "Id": 2,
+    "Description": "Automatyka pomiarowa standardowa",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 2902.00
+  },
+
+  {
+    "Id": 3,
+    "Description": "Automatyka pomiarowa zaawansowana",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 2899.00
+  }
+  
+]

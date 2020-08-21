@@ -1,0 +1,24 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Gwarancja standardowa 7 lat",
+    "DefaultQuantity": 0,
+    "Unit": "szt",
+    "BasicUnitPrice": 0
+  },
+  {
+    "Id": 2,
+    "Description": "Gwarancja rozszerzona 15 lat - płatna jednorazowo",
+    "DefaultQuantity": 45,
+    "Unit": "szt",
+    "BasicUnitPrice": 10.00
+  },
+  {
+    "Id": 3,
+    "Description": "Gwarancja rozszerzona 15 lat - płatna cyklicznie",
+    "DefaultQuantity": 90,
+    "Unit": "szt",
+    "BasicUnitPrice": 10.00
+  }
+  
+]

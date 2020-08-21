@@ -1,0 +1,16 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Skrzynka DC",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 2167.00
+  },
+  {
+    "Id": 2,
+    "Description": "Skrzynka DC - specjalna",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 2167.00
+  }
+]

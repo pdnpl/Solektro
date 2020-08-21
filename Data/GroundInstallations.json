@@ -1,0 +1,9 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Brak",
+    "DefaultQuantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 0
+  }
+]

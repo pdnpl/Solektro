@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Brak ubezpieczenia",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 0
+  },
+
+  {
+    "Id": 2,
+    "Description": "Ubezpieczenie instalacji - 1 rok",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 0
+  },
+
+  {
+    "Id": 3,
+    "Description": "Ubezpieczenie pełne (instalacja + nieruchomość) - 3 lata",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 1800
+  }
+  
+]

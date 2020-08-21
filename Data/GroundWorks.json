@@ -1,0 +1,17 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Brak prac gruntowych",
+    "Quantity": 0,
+    "Unit": "m",
+    "BasicUnitPrice": 0
+  },
+
+  {
+    "Id": 2,
+    "Description": "Prace gruntowe",
+    "Quantity": 1,
+    "Unit": "m",
+    "BasicUnitPrice": 1734.00
+  }
+]

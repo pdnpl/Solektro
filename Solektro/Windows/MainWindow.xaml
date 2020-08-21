@@ -1,0 +1,645 @@
+﻿<Window x:Class="Solektro.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Solektro.Windows"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance {x:Type local:ViewModel}, IsDesignTimeCreatable=True}"
+        Loaded="Window_Loaded" Closed="Window_Closed" SourceUpdated="Window_BindingUpdated" TargetUpdated="Window_BindingUpdated"
+        Title="Konfigurator Solektro" Height="890" Width="810">
+
+    <Border Margin="5,5,5,5" BorderThickness="2" BorderBrush="Gainsboro" >
+        <ScrollViewer VerticalScrollBarVisibility="Visible" CanContentScroll="True">
+            <Grid Margin="5,5,5,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0" Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Grid.Row="0" Grid.Column="0" VerticalContentAlignment="Center" Margin="0,0,0,5" Content="Doradca" />
+                    <Label Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center" Margin="0,0,0,0" Content="Marża" />
+
+                    <TextBox Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" Margin="0,0,0,5" Text="{Binding Path=Offer.Consultant.Name, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
+                    <ComboBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,0,0" ItemsSource="{Binding Path=Margins}" SelectedItem="{Binding Path=Offer.Margin, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=.}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <Label Grid.Row="0" Grid.Column="3" VerticalContentAlignment="Center" Margin="0,0,0,2" Content="Pakiet"/>
+                    <Label Grid.Row="1" Grid.Column="3" VerticalContentAlignment="Center" Margin="0,0,0,0" Content="Moc zestawu PV"/>
+                    
+                    <ComboBox Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" Margin="0,0,0,2" ItemsSource="{Binding Path=Kits}" SelectedItem="{Binding Path=Offer.Kit, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" SelectionChanged="KitComboBox_SelectionChanged" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <ComboBox Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Margin="0,0,0,0" ItemsSource="{Binding Path=KitPowers}" SelectedItem="{Binding Path=Offer.KitPower, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" SelectionChanged="PowerComboBox_SelectionChanged" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Text}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                   
+                </Grid>
+
+                <Grid Grid.Row="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+
+                <Grid Grid.Row="1"  Background="MintCream" Margin="0,30,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="4.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource Frame}" Background="AliceBlue" >
+                        <Label Style="{StaticResource LabelTitle}" Content="Oferta instalacji PV o mocy"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Style="{StaticResource FrameRight}" Background="AliceBlue">
+                        <TextBlock  Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.PowerCalc.Text}" />
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource Frame}">
+                        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelTitle}" Content="Rodzaj"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource Frame}">
+                        <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource LabelTitle}" Content="Produkty" />
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2" Style="{StaticResource Frame}">
+                        <Label Grid.Row="1" Grid.Column="2" Style="{StaticResource LabelTitle}" Content="Ilość"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="3" Style="{StaticResource Frame}">
+                        <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource LabelTitle}" Content="J.m."/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="4" Style="{StaticResource Frame}">
+                        <Label Grid.Row="1" Grid.Column="4" Style="{StaticResource LabelTitle}" Content="Cena netto"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="5" Style="{StaticResource FrameRight}">
+                        <Label Grid.Row="1" Grid.Column="5" Style="{StaticResource LabelTitle}" Content="Wartość netto" />
+                    </Border>
+
+                    <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource Frame}">
+                        <Label Style="{StaticResource LabelType}" Content="Panele" />
+                    </Border>
+                    <Grid Grid.Row="2" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Grid.Column="0" Name="SolarPanelGroupCB" ItemsSource="{Binding Path=SolarPanelGroups}" SelectedItem="{Binding Path=SelectedSolarPanelsGroup, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" SelectedValuePath="Key" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Key}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" ItemsSource="{Binding Path=SelectedSolarPanelsGroup}" SelectedItem="{Binding Path=Offer.Panel.Item, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" SelectionChanged="SolarPanelComboBox_SelectionChanged" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Model}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </Grid>
+
+                    <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource TextBoxQ}" Text="{Binding Path=Offer.Panel.Quantity, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" TextChanged="PanelQtyTextBox_TextChanged" />
+                    <Border Grid.Row="2" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Panel.Item.Unit}"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="4" Style="{StaticResource Frame}" Height="27" Grid.RowSpan="2" VerticalAlignment="Top" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Panel.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Panel.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="3" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Falownik"/>
+                    </Border>
+                    <Grid Grid.Row="3" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Grid.Column="0" Name="InverterGroupsCB" ItemsSource="{Binding Path=InverterGroups}" SelectedItem="{Binding Path=SelectedInvertersGroup, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" SelectedValuePath="Key" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Key}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" ItemsSource="{Binding Path=SelectedInvertersGroup}" SelectedItem="{Binding Path=Offer.Inverter.Item, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Model}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </Grid>
+
+                    <TextBox Grid.Row="3" Grid.Column="2" Style="{StaticResource TextBoxQ}" Text="{Binding Path=Offer.Inverter.Quantity, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
+                    <Border Grid.Row="3" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Inverter.Item.Unit}"/>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Inverter.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Inverter.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="4" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Optymalizatory" />
+                    </Border>
+                    <Grid Grid.Row="4" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Grid.Column="0" SelectedIndex="0" ItemsSource="{Binding Path=OptimizerGroups}" SelectedItem="{Binding Path=ItemsSource, ElementName=OptimizersComboBox}" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Key}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" Name="OptimizersComboBox" SelectedIndex="0" SelectedItem="{Binding Path=Offer.Optimizer.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Model}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </Grid>
+
+                    <Border Grid.Row="4" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,0,0,0"  >
+                        <TextBox Style="{StaticResource TextBoxQ}" Text="{Binding Path=Offer.Optimizer.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Optimizer.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Optimizer.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Optimizer.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="5" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Elektryka" />
+                    </Border>
+                    <ComboBox Grid.Row="5" Grid.Column="1" IsReadOnly="True" SelectedIndex="0" ItemsSource="{Binding Path=AcDistributionBoards}" SelectedItem="{Binding Path=Offer.AcDistributionBoard.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="5" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,0" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.AcDistributionBoard.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="5" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.AcDistributionBoard.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="5" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.AcDistributionBoard.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="5" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.AcDistributionBoard.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="6" Grid.Column="0" Style="{StaticResource Frame}">
+                        <Label Style="{StaticResource LabelType}" Content="Elektryka"/>
+                    </Border>
+                    <ComboBox Grid.Row="6" Grid.Column="1" IsReadOnly="True" SelectedIndex="0" ItemsSource="{Binding Path=AcMaterials}" SelectedItem="{Binding Path=Offer.AcMaterial.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="6" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,0"  >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.AcMaterial.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="6" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.AcMaterial.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="6" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.AcMaterial.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="6" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.AcMaterial.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="7" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Elektryka"/>
+                    </Border>
+                    <ComboBox Grid.Row="7" Grid.Column="1" IsReadOnly="True" SelectedIndex="0" ItemsSource="{Binding Path=DcDistributionBoard}" SelectedItem="{Binding Path=Offer.DcDistributionBoard.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="7" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,0" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.DcDistributionBoard.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="7" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.DcDistributionBoard.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="7" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.DcDistributionBoard.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="7" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.DcDistributionBoard.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="8" Grid.Column="0" Style="{StaticResource Frame}">
+                        <Label Style="{StaticResource LabelType}" Content="Elektryka"/>
+                    </Border>
+                    <ComboBox Grid.Row="8" Grid.Column="1" IsReadOnly="True" SelectedIndex="0" ItemsSource="{Binding Path=DcMaterials}" SelectedItem="{Binding Path=Offer.DcMaterial.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="8" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,0"  >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.DcMaterial.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="8" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.DcMaterial.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="8" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.DcMaterial.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="8" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.DcMaterial.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="9" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Montaż" />
+                    </Border>
+                    <Grid Grid.Row="9" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <ComboBox Name="InstallationTypeGroupsCB" Grid.Column="0" ItemsSource="{Binding Path=InstallationTypeGroups}" SelectedItem="{Binding Path=SelectedInstallationTypesGroup, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" SelectedValuePath="Key" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Key}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+
+                        <ComboBox Grid.Column="1" ItemsSource="{Binding Path=SelectedInstallationTypesGroup}" SelectedItem="{Binding Path=Offer.InstallationsType.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=Description}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </Grid>
+
+                    <Border Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="LightGray" BorderThickness="0,1,0,0"  >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.PowerCalc.Text}" />
+                    </Border>
+                    <Border Grid.Row="9" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.InstallationsType.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="9" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.InstallationsType.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="10" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Montaż" />
+                    </Border>
+                    <ComboBox Grid.Row="10" Grid.Column="1" SelectedIndex="0" ItemsSource ="{Binding Path=InstallationWorks}" SelectedItem="{Binding Path=Offer.InstallationWork.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2" BorderBrush="LightGray" BorderThickness="0,1,0,0"  >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.PowerCalc.Text}" />
+                    </Border>
+
+                    <Border Grid.Row="10" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.InstallationWork.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="10" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.InstallationWork.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="11" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Montaż" />
+                    </Border>
+                    <ComboBox Grid.Row="11" Grid.Column="1" SelectedIndex="0" ItemsSource="{Binding Path=GroundWorks}" SelectedItem="{Binding Path=Offer.GroundWork.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Grid.Column="0" Content="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBox Grid.Row="11" Grid.Column="2" Style="{StaticResource TextBoxQ}" Text="{Binding Path=Offer.GroundWork.Quantity, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
+                    <Border Grid.Row="11" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.GroundWork.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="11" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.GroundWork.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="11" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.GroundWork.NetAmount, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="12" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Dodatki" />
+                    </Border>
+                    <ComboBox Grid.Row="12" Grid.Column="1" SelectedIndex="0" ItemsSource="{Binding Path=Monitorings}" SelectedItem="{Binding Path=Offer.Monitoring.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="12" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,0" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Monitoring.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="12" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Monitoring.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="12" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Monitoring.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="12" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Monitoring.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="13" Grid.Column="0" Style="{StaticResource FrameEnd}">
+                        <Label Style="{StaticResource LabelType}" Content="Dodatki" />
+                    </Border>
+                    <ComboBox Grid.Row="13" Grid.Column="1" IsReadOnly="True" SelectedIndex="0"  ItemsSource="{Binding Path=Documentations}" SelectedItem="{Binding Path=Offer.Documentation.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="13" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,1" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Documentation.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="13" Grid.Column="3" Style="{StaticResource FrameEnd}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Documentation.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="13" Grid.Column="4" Style="{StaticResource FrameEnd}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Documentation.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="13" Grid.Column="5" BorderBrush="LightGray" BorderThickness="1,1,1,1" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Documentation.NetAmount, StringFormat=C2}" />
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Marża"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Total.MarginAmount, StringFormat=C2}" />
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="Cena netto kW"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Total.KwAmount, StringFormat=C2}" />
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource LabelType}" Content="Wartość Netto Instalacji" />
+                        <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Total.NetAmount, StringFormat=C2}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelType}" Content="VAT"  />
+                        <ComboBox Grid.Row="1" Grid.Column="1" Margin="-2,0,35,0" VerticalAlignment="Center" ItemsSource="{Binding Path=Vats}" SelectedItem="{Binding Path=Offer.Total.VatRate, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"  >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Grid.Column="0" Text="{Binding Path=.}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Total.VatAmount, StringFormat=C2}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource LabelType}" Content="Wartość Brutto Instalacji" />
+                        <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Total.GrossAmount, StringFormat=C2}"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="3" Background="MintCream" Margin="0,30,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.1*"/>
+                        <ColumnDefinition Width="4.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelTitle}" Content="Rodzaj" />
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelTitle}" Content="Produkty"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelTitle}" Content="Ilość" />
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelTitle}" Content="J.m." />
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelTitle}" Content="Cena netto"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <Label Style="{StaticResource LabelTitle}" Content="Wartość netto" />
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Gwarancja" />
+                    </Border>
+                    <ComboBox Grid.Row="1" Grid.Column="1" SelectedIndex="0" ItemsSource="{Binding Path=Warranties}" SelectedItem="{Binding Path=Offer.Warranty.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="1" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,0"  >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Inspections.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Inspections.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Inspections.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Inspections.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource Frame}" >
+                        <Label Style="{StaticResource LabelType}" Content="Przegląd" />
+                    </Border>
+                    <ComboBox Grid.Row="2" Grid.Column="1" SelectedIndex="0" ItemsSource="{Binding Path=Inspections}" SelectedItem="{Binding Path=Offer.Inspections.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="2" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,0" Height="27" Grid.RowSpan="2" VerticalAlignment="Top"  >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding  Path=Offer.Warranty.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="3" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Warranty.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="4" Style="{StaticResource Frame}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Warranty.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="5" Style="{StaticResource FrameRight}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Warranty.NetAmount, StringFormat=C2}" />
+                    </Border>
+
+                    <Border Grid.Row="3" Grid.Column="0" Style="{StaticResource FrameEnd}" >
+                        <Label Style="{StaticResource LabelType}" Content="Ubezpieczenie" />
+                    </Border>
+                    <ComboBox Grid.Row="3" Grid.Column="1" SelectedIndex="0" ItemsSource="{Binding Path=Insurances}" SelectedItem="{Binding Path=Offer.Insurance.Item, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Description}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Grid.Row="3" Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,1,0,1" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Insurance.Quantity}" />
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="3" Style="{StaticResource FrameEnd}" >
+                        <TextBlock Style="{StaticResource TextBlockOther}" Text="{Binding Path=Offer.Insurance.Item.Unit}" />
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="4" Style="{StaticResource FrameEnd}" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Insurance.NetUnitPrice, StringFormat=C2}" />
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="5" BorderBrush="LightGray" BorderThickness="1,1,1,1" >
+                        <TextBlock Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Insurance.NetAmount, StringFormat=C2}" />
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="4" Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Button Background="WhiteSmoke" Margin="-5,25,150,0" HorizontalAlignment="Center" Content="Eksport do HTML" Click="ExportToHtml_Click" />
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelType}" Content="Przeglądy gwarancyjne"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Warranty.NetAmount, StringFormat=C2}" />
+
+                        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelType}" Content="Ubezpieczenie"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBlockAmount}" Text="{Binding Path=Offer.Insurance.NetAmount, StringFormat=C2}"/>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+</Window>

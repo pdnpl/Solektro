@@ -1,0 +1,602 @@
+[
+  {
+    "Id": 1,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 1100G3",
+    "Power": 1100,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 3809.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 2,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 1600G3",
+    "Power": 1600,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 3930.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 3,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 2200G3",
+    "Power": 2200,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 3949.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 4,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 2700G3",
+    "Power": 2700,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 4442.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 5,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 3000TL-G3",
+    "Power": 3000,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 3995.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 6,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 3.6KTLM-G2",
+    "Power": 3600,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 4715.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 7,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 4KTLM-G2",
+    "Power": 4000,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 5111.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 8,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 3.3KTL-X",
+    "Power": 3300,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 6548.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 9,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 4.4KTL-X",
+    "Power": 4400,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 5756.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 10,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 5.5KTL-X",
+    "Power": 5500,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 5961.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 11,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 6.6KTL-X",
+    "Power": 6600,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 5958.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 12,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 8.8KTL-X",
+    "Power": 8800,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 6008.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 13,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 11KTL-X",
+    "Power": 11000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 6580.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 14,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 12KTL-X",
+    "Power": 12000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 7909.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 15,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 15000TL",
+    "Power": 15000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 7857.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 16,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 20000TL",
+    "Power": 20000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 9931.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 17,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 20000TL",
+    "Power": 20000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 9931.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 18,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 25000TL",
+    "Power": 25000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 8860.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 19,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 30000TL",
+    "Power": 30000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 11457.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 20,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 33000TL",
+    "Power": 33000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 12820.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 21,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 36000TL",
+    "Power": 36000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 12740.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 22,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 50000TL",
+    "Power": 50000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 13460.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 23,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 60000TL",
+    "Power": 60000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 15793.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 24,
+    "Manufacturer": "Sofar",
+    "Model": "Sofar 70000TL",
+    "Power": 70000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 18017.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 25,
+    "Manufacturer": "Afore",
+    "Model": "Afore HNS 1000TL-1",
+    "Power": 1000,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 3515.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 26,
+    "Manufacturer": "Afore",
+    "Model": "Afore HNS 1500TL-1",
+    "Power": 1500,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 3785.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 27,
+    "Manufacturer": "Afore",
+    "Model": "Afore HNS 2000TL-1",
+    "Power": 2000,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 3935.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 28,
+    "Manufacturer": "Afore",
+    "Model": "Afore HNS 2500TL-1",
+    "Power": 2500,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 4004.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 29,
+    "Manufacturer": "Afore",
+    "Model": "Afore HNS 3000TL-1",
+    "Power": 3000,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 4550.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 30,
+    "Manufacturer": "Afore",
+    "Model": "Afore HNS 3600TL-1",
+    "Power": 3600,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 4940.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 31,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 003KTL",
+    "Power": 3000,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 4782.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 32,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 004KTL",
+    "Power": 4000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 6962.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 33,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 005KTL",
+    "Power": 5000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 7155.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 34,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 006KTL",
+    "Power": 6000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 7907.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 35,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 008KTL",
+    "Power": 8000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 7460.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 36,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 10KTL",
+    "Power": 10000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 8315.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 37,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 12KTL",
+    "Power": 12000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 8741.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 38,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 15KTL",
+    "Power": 15000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 9282.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 39,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 17KTL",
+    "Power": 17000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 9722.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 40,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 20KTL",
+    "Power": 20000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 10288.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 41,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 25KTL",
+    "Power": 25000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 11410.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 42,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 30KTL",
+    "Power": 30000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 12220.50,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 43,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 40KTL",
+    "Power": 40000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 13435.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 44,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 50KTL",
+    "Power": 50000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 15620.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 45,
+    "Manufacturer": "Afore",
+    "Model": "Afore BNT 60KTL",
+    "Power": 60000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 17300.00,
+    "Warranty": 10,
+    "AdditionalWarranty": 15
+  },
+
+  {
+    "Id": 46,
+    "Manufacturer": "Fronius",
+    "Model": "Fronius Primo 3.5-1",
+    "Power": 3500,
+    "Phase": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 7376.00,
+    "Warranty": 7,
+    "AdditionalWarranty": 10
+  },
+
+  {
+    "Id": 47,
+    "Manufacturer": "Fronius",
+    "Model": "Fronius Symo 3.0-3-S",
+    "Power": 3000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 7355.00,
+    "Warranty": 7,
+    "AdditionalWarranty": 10
+  },
+
+  {
+    "Id": 48,
+    "Manufacturer": "Fronius",
+    "Model": "Fronius Symo 3.7-3-S",
+    "Power": 3700,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 7925.00,
+    "Warranty": 7,
+    "AdditionalWarranty": 10
+  },
+
+  {
+    "Id": 49,
+    "Manufacturer": "Fronius",
+    "Model": "Fronius Symo 4.5-3-S",
+    "Power":4500,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 8500.00,
+    "Warranty": 7,
+    "AdditionalWarranty": 10
+  },
+
+  {
+    "Id": 50,
+    "Manufacturer": "Fronius",
+    "Model": "Fronius Symo 3.0-3-M",
+    "Power": 3000,
+    "Phase": 3,
+    "Unit": "szt",
+    "BasicUnitPrice": 6875.00,
+    "Warranty": 7,
+    "AdditionalWarranty": 10
+  }
+
+]

@@ -1,0 +1,9 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Skrzynka AC",
+    "DefaultQuantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 2167.00
+  }
+]

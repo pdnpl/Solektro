@@ -1,0 +1,10 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Prace instalatorskie",
+    "DefaultQuantity": 1,
+    "Unit": "kW",
+    "BasicUnitPrice": 41.00
+  }
+
+]

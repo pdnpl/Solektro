@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 1,
+    "Description": "Eko",
+    "DefaultPanelId": 2,
+    "DefaultInverterId": 2,
+    "DefaultInstallationTypeId": 2
+  },
+  {
+    "Id": 2,
+    "Description": "Standard",
+    "DefaultPanelId": 3,
+    "DefaultInverterId": 3,
+    "DefaultInstallationTypeId": 3
+  },
+  {
+    "Id": 3,
+    "Description": "Premium",
+    "DefaultPanelId": 13,
+    "DefaultInverterId": 13,
+    "DefaultInstallationTypeId": 15
+  },
+  {
+    "Id": 4,
+    "Description": "Super premium",
+    "DefaultPanelId": 10,
+    "DefaultInverterId": 10,
+    "DefaultInstallationTypeId": 21
+  }
+]

@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Brak dokumentacji",
+    "DefaultQuantity": 1,
+    "Unit": "kpl",
+    "BasicUnitPrice": 0
+  },
+
+  {
+    "Id": 2,
+    "Description": "Dokumentacja techniczna",
+    "DefaultQuantity": 1,
+    "Unit": "kpl",
+    "BasicUnitPrice": 2400.00
+  },
+
+  {
+    "Id": 3,
+    "Description": "Dokumentacja techniczna - pełna",
+    "DefaultQuantity": 1,
+    "Unit": "kpl",
+    "BasicUnitPrice": 3200.00
+  }
+  
+]

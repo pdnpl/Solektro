@@ -1,0 +1,73 @@
+﻿[
+  {
+    "Id": 1,
+    "Manufacturer": "Brak",
+    "Model": "Brak optymalizacji",
+    "Moc": "0;",
+    "Unit": "szt",
+    "BasicUnitPrice": 0
+  },
+
+  {
+    "Id": 2,
+    "Manufacturer": "Tigo",
+    "Model": "TS4-R-O",
+    "Moc": "475;",
+    "Unit": "szt",
+    "BasicUnitPrice": 1927.00
+  },
+
+  {
+    "Id": 3,
+    "Manufacturer": "SolarEdge",
+    "Model": "P370-5R M4M RM",
+    "Moc": "370;",
+    "Unit": "szt",
+    "BasicUnitPrice": 1924.00
+  },
+
+  {
+    "Id": 4,
+    "Manufacturer": "SolarEdge",
+    "Model": "P300-5R M4M RS",
+    "Moc": "300;",
+    "Unit": "szt",
+    "BasicUnitPrice": 1902.00
+  },
+
+  {
+    "Id": 5,
+    "Manufacturer": "SolarEdge",
+    "Model": "P404-5R M4M RM",
+    "Moc": "405;",
+    "Unit": "szt",
+    "BasicUnitPrice": 1936.00
+  },
+
+  {
+    "Id": 6,
+    "Manufacturer": "SolarEdge",
+    "Model": "P730 - 4R M4M RM",
+    "Moc": "730;",
+    "Unit": "szt",
+    "BasicUnitPrice": 1951.00
+  },
+
+  {
+    "Id": 7,
+    "Manufacturer": "SolarEdge",
+    "Model": "P650-4R M4M RL",
+    "Moc": "650;",
+    "Unit": "szt",
+    "BasicUnitPrice": 1993.55
+  },
+
+  {
+    "Id": 8,
+    "Manufacturer": "SolarEdge",
+    "Model": "P850",
+    "Moc": "850;",
+    "Unit": "szt",
+    "BasicUnitPrice": 2037.00
+  }
+]

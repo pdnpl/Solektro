@@ -1,0 +1,9 @@
+﻿[
+  {
+    "Id": 1,
+    "Description": "Obowiązkowe przeglady gwarancyjne dla gwarancji rozszerzonej",
+    "Quantity": 1,
+    "Unit": "szt",
+    "BasicUnitPrice": 0
+  }
+]
